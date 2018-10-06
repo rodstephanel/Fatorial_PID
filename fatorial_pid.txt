@@ -1,0 +1,79 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/types.h>
+
+int main(int argc, char *argv[]){
+
+	pid_t filho1, filho2;
+
+	int cont=0, num=0, r1, r2, total1=1, total2=1, estado, totalfatorial=0;
+
+	system("clear");
+
+	printf("\nDigite um numero para calcular o fatorial: \n");
+	scanf("%d", &num);
+
+	//condicao para verificacao de numeros pares e impares//
+	if(num %2 !=0){
+		r1 = num;
+		r2 = (num-1)/2;
+	}else{
+		r1 = num;
+		r2 = num/2;
+	}
+
+	//criacao do filho 1 para calcular metade do numero fatorado//
+	filho1 = fork();
+	if(filho1 == 0){
+		FILE *pont_arquivo1;
+		pont_arquivo1 = fopen("arquivo_r1.txt", "w");
+
+		//calculo e gravacao de uma metade do numero fatorado//
+		for(cont=r1; r1>r2; r1--){
+			total1 = total1 * (r1);
+		}
+		fprintf(pont_arquivo1, "%d", total1);
+		fclose(pont_arquivo1);
+
+		exit(0);
+	}
+
+	//criacao do filho 2 para calcular metade do numero fatorado//
+	filho2 = fork();
+	if(filho2 == 0){
+		FILE *pont_arquivo2;
+		pont_arquivo2 = fopen("arquivo_r2.txt", "w");
+
+		//calculo e gravacao de uma metade do numero fatorado//
+		for(cont=r2; r2>1; r2--){
+			total2 = total2 * (r2);
+		}
+		fprintf(pont_arquivo2, "%d", total2);
+		fclose(pont_arquivo2);
+
+		exit(0);
+	}
+
+	//processo pai aguardando os processos filhos terminarem//
+	waitpid(filho1, estado, 0);
+	waitpid(filho2, estado, 0);
+
+	//recuperacao dos dados do filho 1//
+	FILE *arq1;
+	arq1 = fopen("arquivo_r1.txt", "r");
+	fscanf(arq1, "%d", &total1);
+	fclose(arq1);
+
+	//recuperacao dos dados do filho 2//
+	FILE *arq2;
+	arq2 = fopen("arquivo_r2.txt", "r");
+	fscanf(arq2, "%d", &total2);
+	fclose(arq2);
+
+	//calculo final, somando os valores recuperados//
+	totalfatorial = total1 * total2;
+
+	printf("/nO resultado fatorial eh: %d/n/n", totalfatorial);
+
+return 0;
+}
