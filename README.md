@@ -1,4 +1,7 @@
-# Fatorial_PID
+# Fatorial_Fork
+Rodrigo R. Stephanel
+rod.stephanel@gmail.com
+
 Cálculo fatorial utilizando fork.
 Cálculo feito em dois pid e os resultados gravado em arquivo externo, 
 após gerado as duas metades do fatorial, os valores são recuperados e 
