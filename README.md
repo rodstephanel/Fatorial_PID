@@ -1,6 +1,6 @@
 # Fatorial_Fork
 
-![Logo](https://twitter.com/RodStephanel/status/1051467494253350912)
+![Logo](https://www.dropbox.com/home?preview=logo_git.gif)
 
 <p><strong>Rodrigo R. Stephanel</strong><br />
   <em>rod.stephanel@gmail.com</em></p>
