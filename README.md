@@ -1,4 +1,7 @@
 # Fatorial_Fork
+
+![Logo]()
+
 <p><strong>Rodrigo R. Stephanel</strong><br />
   <em>rod.stephanel@gmail.com</em></p>
 
