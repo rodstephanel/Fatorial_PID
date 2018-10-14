@@ -1,11 +1,11 @@
 # Fatorial_Fork
-Rodrigo R. Stephanel
-rod.stephanel@gmail.com
+<p>Rodrigo R. Stephanel<br />
+rod.stephanel@gmail.com</p>
 
-Cálculo fatorial utilizando fork.
-Cálculo feito em dois pid e os resultados gravado em arquivo externo, 
-após gerado as duas metades do fatorial, os valores são recuperados e 
-cálculo o valor final do número fatorial.
+<p> Cálculo fatorial utilizando fork.<br />
+Cálculo feito em dois pid e os resultados gravado em arquivo externo,<br/>
+após gerado as duas metades do fatorial, os valores são recuperados e<br/>
+cálculo o valor final do número fatorial.</p>
 
 Factorial calculation using fork.
 Calculation in two pid and the results recorded in external file, 
