@@ -1,10 +1,5 @@
 # Fatorial_Fork
-
-![logo_rodrigo](https://user-images.githubusercontent.com/31445805/46917673-fb707100-cf9f-11e8-8fc3-fb3223643227.png)
-
-<p><strong>Rodrigo R. Stephanel</strong><br />
-  <em>rod.stephanel@gmail.com</em></p>
-
+![logo_rodrigo](https://user-images.githubusercontent.com/31445805/46917707-47bbb100-cfa0-11e8-924c-dcc7e9942804.png)
 <p> Cálculo fatorial utilizando fork.<br />
 Cálculo feito em dois pid e os resultados gravado em arquivo externo,<br/>
 após gerado as duas metades do fatorial, os valores são recuperados e<br/>
